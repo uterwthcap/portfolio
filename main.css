@@ -167,7 +167,7 @@ body {
 
 .content-i-can {
     width: 100%;
-    height: 100%;
+    height: fit-content;
 
     padding-bottom: clamp(50px, 15vh, 150px) ;
     display: flex;
