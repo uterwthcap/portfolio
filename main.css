@@ -626,7 +626,7 @@ header {
 }
 
 .wrapper-body {
-    display: flex;
+    display: block;
     position: relative; 
 }
 
@@ -651,9 +651,9 @@ header {
         font-weight: 700;
     }
 
-    .nav {
-        position: fixed;
-        top: -100vh;
+    header .nav {
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
 
@@ -668,8 +668,12 @@ header {
         padding: 30px 20px;
         background-color: #FFB6C1;
 
-        z-index: -1;
-        transition: top 0.5s ease;
+        z-index: 1;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-12px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
        
         border-bottom: 1px solid #FFFFFF;
     }
@@ -738,7 +742,10 @@ header {
     }
 
     .header:has(.burger-toggle:checked) .nav {
-        top: 70px;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }   
 
     .links {
@@ -1278,6 +1285,10 @@ header {
         border-radius: 30px;
     }
 
+    footer .nav {
+        display: none;
+    }
+
     .footer {
         box-sizing: border-box;
         
@@ -1298,14 +1309,7 @@ header {
     }
 
     .wrapper-body {
-        display: flex;
+        display: block;
         position: relative; 
     }
-
-    html {
-        scroll-behavior: auto;
 }
-}
-
-
-
