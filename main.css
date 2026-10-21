@@ -1128,14 +1128,19 @@ header {
     
 
     input[type="radio"] {
+        -webkit-appearance: none;
         appearance: none;
+
         aspect-ratio: 1 / 1;
         width: 32px;
         height: 32px;
+
         margin: 0;
         flex-shrink: 0;
+
         border-radius: 50%;
         background-color: #A8DADC;
+
         cursor: pointer;
     }
 
