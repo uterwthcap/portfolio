@@ -827,11 +827,15 @@ header {
         cursor: pointer;
 
         transition: 0.3s ease; 
-    }
 
-    .contact {
-        color: #000000;
+        color: #333333;
         text-decoration: none;
+
+        -webkit-appearance: none;
+        appearance: none;
+        -webkit-text-fill-color: #333333;
+        color: #333333;
+
     }
 
     .img-container {
