@@ -1301,6 +1301,10 @@ header {
         display: flex;
         position: relative; 
     }
+
+    html {
+        scroll-behavior: auto;
+}
 }
 
 
