@@ -630,7 +630,7 @@ header {
     position: relative; 
 }
 
-@media (max-width: 1200px) {
+@media (800px < width <= 1200px) {
 
     .header {
         box-sizing: border-box;
@@ -729,6 +729,7 @@ header {
         font-weight: 800;
         margin: 0;
 
+        text-align: center;
     }
 
     .someInfo {
@@ -822,19 +823,44 @@ header {
         gap: 40px;
         flex-wrap: wrap;
 
+        position: relative;
+
         width: 100%;
-        max-width: 1167px;
+        max-width: 800px;
+        aspect-ratio: 1 / 1;
 
     }
 
     .photo-container {
-        width: clamp(100px, 29%, calc((100% - 117px) / 3));
-        padding-top: calc((100% - 117px) / 3);
+        width: 50%;
+        padding-top: none;
+        aspect-ratio: 1 / 1;
         
         position: relative;
         display: flex;
         flex-direction: column;
     }
+
+    .photo-container:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    .photo-container:nth-child(2) {
+        position: absolute;
+        top: 220px;
+        left: 20%;
+
+    }
+
+    .photo-container:nth-child(3) {
+        position: absolute;
+        top: 440px;
+        left: 40%;
+    }
+
 
     .img-i-can {
         height: 65%;
@@ -1077,12 +1103,12 @@ header {
     }
 
     .gender {
-    display: flex;
-    align-items: center;
-    gap: 22%; 
-    width: 90%;
-    height: fit-content;
-    padding-top: 5%;
+        display: flex;
+        align-items: center;
+        gap: 28%; 
+        width: 90%;
+        height: fit-content;
+        padding-top: 5%;
     }
 
     input[type="radio"] {
@@ -1114,7 +1140,7 @@ header {
     }
 
     .gender label {
-        font-size: 36px;
+        font-size: calc(15px + 21 * (100vw / 1200));
         cursor: pointer;
         
     }
@@ -1165,7 +1191,7 @@ header {
         display: flex;
         justify-content: space-around;
         margin: 0;
-        padding: 0 135px 185px 135px;
+        padding: 0 80px 185px 80px;
         gap: 58.5px;
         width: 100%;
     }
@@ -1249,11 +1275,11 @@ header {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
 
 
     .wrapper-border-bottom {
-        max-width: 500px;
+        max-width: 800px;
         width: 100vw;
     }
 
@@ -1383,7 +1409,7 @@ header {
     }
 
     .main {
-        max-width: 500px;
+        max-width: 800px;
         width: 100%;
 
         height: auto;
@@ -1473,7 +1499,7 @@ header {
         max-height: none;
         height: fit-content;
         width: 100%;
-        max-width: 500px;
+        max-width: 800px;
     }
 
     .content-i-can {
@@ -1518,6 +1544,8 @@ header {
         display: flex;
         flex-direction: column;
     }
+
+    
 
     .img-i-can {
         height: 65%;
@@ -1581,7 +1609,7 @@ header {
     }
 
     .works {
-        max-width: 500px;
+        max-width: 800px;
         width: 100%;
         gap: 40px;
     }   
@@ -1598,7 +1626,7 @@ header {
         width: 100%;
 
         padding-bottom: 115px;
-        padding: 0;
+        padding: 0 0 100px 0;
         margin: 0;
     }
 
@@ -1617,7 +1645,7 @@ header {
         padding: 0;
 
     }
-    .work:nth-child(even) .info-about-work {
+    .work:nth-child(even) {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
